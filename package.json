@@ -4,8 +4,13 @@
   "description": "",
   "main": "script.js",
   "scripts": {
+    "check-types": "tsc",
+    "check-types:watch": "tsc --watch",
+    "monitors": "docker-compose up -d influxdb grafana",
+    "test": "docker-compose run --rm k6 run /scripts/scriptTest.bundle.js",
     "build": "webpack",
-    "go:k6": "yarn build && k6 run dist/scriptTest.bundle.js"
+    "go:k6": "yarn build && k6 run dist/scriptTest.bundle.js",
+    "go:docker": "yarn build && yarn test"
   },
   "author": "Suresh Kumar",
   "license": "ISC",
