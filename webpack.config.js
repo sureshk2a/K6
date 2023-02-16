@@ -12,8 +12,7 @@ module.exports = {
 
     entry: {
 
-        soakTest: './src/tests/soak.test.ts',
-        seedCrocs: './src/tests/create-crocs.seed.ts',
+        scriptTest: './src/tests/script.test.ts',
 
     },
 
